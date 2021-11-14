@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 app.config.from_object(__name__)
 
-with open('pokemon.csv', encoding="utf-16", delimiter='\t') as f:
-    csv_reader = csv.reader(f)
+with open('pokemon.csv', encoding="utf-16") as f:
+    csv_reader = csv.reader(f, delimiter='\t')
     reader = list(csv_reader)
     print(reader[4][0], file=sys.stdout)
 
