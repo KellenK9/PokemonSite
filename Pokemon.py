@@ -5,7 +5,6 @@ import csv
 import os
 import sys
 import random
-import hashlib
 
 app = Flask(__name__)
 
@@ -105,7 +104,7 @@ def register_new_user():
     email = request.form['email']
     password = request.form['password']
     student_prof = request.form['student_prof']
-    add_user(username, email, hash_password(password), student_prof)
+    add_user(username, email, password, student_prof) #hash password
     return render_template("home.html")
 
 @app.route("/logout.html", methods=["post"])
@@ -117,7 +116,7 @@ def logout():
 def login_user():
     username = request.form['username']
     password = request.form['password']
-    valid_log_in = is_login_valid(username, hash_password(password))
+    valid_log_in = is_login_valid(username, password) #Hash passwords
     SESSION_TYPE = 'redis'
     app.config.from_object(__name__)
     #session(app)
