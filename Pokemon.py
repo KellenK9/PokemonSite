@@ -11,7 +11,6 @@ app.config.from_object(__name__)
 with open('pokemon.csv', encoding="utf-16") as f:
     csv_reader = csv.reader(f, delimiter='\t')
     reader = list(csv_reader)
-    print(reader[4][0], file=sys.stdout)
 
 @app.route('/')
 def search():
@@ -37,7 +36,7 @@ def comparison():
     speed1 = reader[num1][18]
     type11 = reader[num1][4]
     type12 = reader[num1][5]
-    total1 = hp1 + attack1 + defense1 + spattack1 + spdefense1 + speed1
+    total1 = int(hp1) + int(attack1) + int(defense1) + int(spattack1) + int(spdefense1) + int(speed1)
 
     attack2 = reader[num2][14]
     defense2 = reader[num2][15]
@@ -47,7 +46,7 @@ def comparison():
     speed2 = reader[num2][18]
     type21 = reader[num2][4]
     type22 = reader[num2][5]
-    total2 = hp2 + attack2 + defense2 + spattack2 + spdefense2 + speed2
+    total2 = int(hp2) + int(attack2) + int(defense2) + int(spattack2) + int(spdefense2) + int(speed2)
 
     return render_template('display.html', pokemon1 = poke1, pokemon2 = poke2, attack1 = attack1, attack2 = attack2, total1 = total1, total2 = total2, defense1 = defense1, defense2 = defense2, hp1 = hp1, hp2 = hp2, spattack1 = spattack1, spattack2 = spattack2, spdefense1 = spdefense1, spdefense2 = spdefense2, speed1 = speed1, speed2 = speed2, type11 = type11, type12 = type12, type21 = type21, type22 = type22)
 
