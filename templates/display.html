@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Website</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Modak&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Modak&family=Roboto:wght@700&display=swap");
+
+h1{
+    font-family: 'Modak', cursive;
+    font-weight: normal;
+    color: #c40404;
+    font-size: 5em;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #570000;
+    font-size: 2.5em;
+}
+.fontz{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #570000;
+    font-size: 1.5em;
+}
+.container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 5% 40% 10% 40% 5%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    ". main1 middle main2 ."
+    "footer footer footer footer";
+}
+.main1{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.main2{
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.header{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+}
+.footer{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  text-align: center;
+}
+ 
+</style>
+ 
+</head>
+<body>
+  <div class="header">
+    <h1>Pokémon Comparison</h1>
+  </div>
+  <div class="container">
+    <div class="main1">
+      <h2>{{pokemon1}}</h2>
+      <img height="200" src="https://img.pokemondb.net/artwork/{{pokemon1}}.jpg">
+      <div class="fontz">
+        <p>{{type11}} {{type12}}</p>
+        <p>-</p>
+        <p>Total Stats: {{total1}}</p>
+        <p>HP: {{hp1}}</p>
+        <p>Attack: {{attack1}}</p>
+        <p>Special Attack: {{spattack1}}</p>
+        <p>Defense: {{defense1}}</p>
+        <p>Special Defense: {{spdefense1}}</p>
+        <p>Speed: {{speed1}}</p>
+      </div>
+    </div>
+    <div class="main2">
+      <h2>{{pokemon2}}</h2>
+      <img height="200" src="https://img.pokemondb.net/artwork/{{pokemon2}}.jpg">
+      <div class="fontz">
+        <p>{{type21}} {{type22}}</p>
+        <p>-</p>
+        <p>Total Stats: {{total2}}</p>
+        <p>HP: {{hp2}}</p>
+        <p>Attack: {{attack2}}</p>
+        <p>Special Attack: {{spattack2}}</p>
+        <p>Defense: {{defense2}}</p>
+        <p>Special Defense: {{spdefense2}}</p>
+        <p>Speed: {{speed2}}</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
