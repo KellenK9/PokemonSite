@@ -10,6 +10,7 @@ app.config.from_object(__name__)
 with open('pokemon.csv', encoding="utf-16") as f:
     csv_reader = csv.reader(f)
     reader = list(csv_reader)
+    print(reader[3])
 
 @app.route('/')
 def search():
