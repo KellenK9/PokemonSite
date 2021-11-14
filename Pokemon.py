@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 app.config.from_object(__name__)
 
-with open('pokemon.csv', 'rb') as f:
+with open('pokemon.csv', encoding="utf-16") as f:
     csv_reader = csv.reader(f)
     reader = list(csv_reader)
 
