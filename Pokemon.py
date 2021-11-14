@@ -21,7 +21,7 @@ def search():
     global poke_names
     return render_template('textboxes.html')
 
-@app.route('/comparison', methods=['POST'])
+@app.route('/comparison', methods=['GET','POST'])
 def comparison():
     poke1 = str(request.form['text1']).lower()
     poke2 = str(request.form['text2']).lower()
