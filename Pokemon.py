@@ -7,7 +7,8 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 with open('pokemon.csv') as f:
-    reader = list(csv.reader(f))
+    csv_reader = csv.reader(f)
+    reader = list(csv_reader)
 
 @app.route('/')
 def search():
