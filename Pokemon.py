@@ -150,9 +150,9 @@ def is_login_valid(username, password):
                 valid = True
         return valid
 
-def hash_password(password):
-    h = hashlib.pbkdf2_hmac('sha256', b'password', b'salt', 100000)
-    return h.hex()
+#def hash_password(password):
+    #h = hashlib.pbkdf2_hmac('sha256', b'password', b'salt', 100000)
+    #return h.hex()
 
 
 
