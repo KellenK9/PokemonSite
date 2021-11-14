@@ -1,6 +1,7 @@
 from flask import Flask, request, g
 from flask import render_template
 import csv
+import os
 
 app = Flask(__name__)
 
@@ -51,33 +52,7 @@ def comparison():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Keep this at end of code
 if __name__ == '__main__':
- app.run(debug=False, host="0.0.0.0")
+    port = os.environ.get("PORT", 5000)
+    app.run(debug=False, host="0.0.0.0", port=port)
