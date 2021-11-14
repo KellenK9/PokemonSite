@@ -1,1 +1,1 @@
-web:python Pokemon.py
+web: python Pokemon.py
