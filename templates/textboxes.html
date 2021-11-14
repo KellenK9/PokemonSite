@@ -22,6 +22,15 @@ h1{
 </head>
 
 <body>
+  <div class="navbar">
+    <a href="/home.html">Home</a>
+    <a href="/classes.html">Classes</a>
+    {% if session['username'] %}
+      <a href="/user_page.html", style="float:right;">{{session['username']}}</a>
+    {% else %}
+      <a href="/login.html", style="float:right;">Log In</a>
+    {% endif %}
+  </div>
   <div class= "container">
     <h1>Enter the names of the 2 pokemon you want to compare</h1>
     <form action="/comparison", method="POST">
