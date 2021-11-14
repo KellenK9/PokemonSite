@@ -16,12 +16,12 @@ with open('pokemon.csv', encoding="utf-16") as f:
     csv_reader = csv.reader(f, delimiter='\t')
     reader = list(csv_reader)
 
-@app.route('/comparison.html')
+@app.route('/comparison')
 def search():
     global poke_names
     return render_template('textboxes.html')
 
-@app.route('/comparison.html', methods=['POST'])
+@app.route('/comparison', methods=['POST'])
 def comparison():
     poke1 = str(request.form['text1']).lower()
     poke2 = str(request.form['text2']).lower()
