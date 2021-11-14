@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Website</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+
+h3{
+    font-family: 'RocknRoll One', sans-serif;
+    font-weight: normal;
+    color: #cf2213;
+    font-size: 1em;
+}
+
+</style>
+
+<script>
+</script>
+
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/home.html">Home</a>
+  <a href="/classes.html">Classes</a>
+  {% if session['username'] %}
+    <a href="/user_page.html", style="float:right;">{{session['username']}}</a>
+  {% else %}
+    <a href="/login.html", style="float:right;">Log In</a>
+  {% endif %}
+</div>
+
+<div class="block1">
+<h1>iRoom</h1>
+<h2>Login or Register</h2>
+<h3>{{error}}</h3>
+
+<form action="/login_user.html" method="post">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" value=""><br>
+  <label for="password">Password:</label><br>
+  <input type="password" required id="password" name="password" value=""><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<form action="/register.html">
+	<input type="submit" value="New User? Register here">
+</form>
+
+</div>
+
+</body>
+</html>
+

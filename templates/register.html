@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Website</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+
+</style>
+
+<script>
+</script>
+
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/home.html">Home</a>
+  <a href="/classes.html">Classes</a>
+  {% if session['username'] %}
+    <a href="/user_page.html", style="float:right;">{{session['username']}}</a>
+  {% else %}
+    <a href="/login.html", style="float:right;">Log In</a>
+  {% endif %}
+</div>
+
+<div class="block1">
+<h1>iRoom</h1>
+<h2>Register New User</h2>
+
+<form action="/new_user.html" method="post">
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email" value=""><br><br>
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" value=""><br><br>
+  <label for="password">Password (8+ characters):</label><br>
+  <input type="password" minlength=8 required id="password" name="password" value=""><br><br>
+  <label for="student">Student</label>
+  <input type="radio" id="student" name="student_prof" value="s">
+  <label for="prof">Professor</label>
+  <input type="radio" id="prof" name="student_prof" value="p"><br>
+  <br><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</div>
+
+</body>
+</html>
+

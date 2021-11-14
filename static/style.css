@@ -1,0 +1,52 @@
+body{
+    text-align: center;    
+}
+
+h1{
+    font-family: 'RocknRoll One', sans-serif;
+    font-weight: normal;
+    color: #2d0b38;
+    font-size: 2.5em;
+}
+
+h2{
+    font-family: 'RocknRoll One', sans-serif;
+    font-weight: normal;
+    color: #2d0b38;
+    font-size: 1.5em;
+}
+
+h3{
+    font-family: 'RocknRoll One', sans-serif;
+    font-weight: normal;
+    color: #cf2213;
+    font-size: 1em;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  font-family: 'RocknRoll One', sans-serif;
+  font-weight: normal;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.block1 {
+  margin-top: 50px;
+}

@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Website</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+
+.pill-nav{
+  padding: 5px;
+}
+
+.pill-nav a {
+  margin: auto;
+  display: block;
+  color: black;
+  width: 50%;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 3px solid black;
+  padding: 15px;
+}
+
+.pill-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+</style>
+
+<script>
+</script>
+
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/home.html">Home</a>
+  <a href="/classes.html">Classes</a>
+  {% if session['username'] %}
+    <a href="/user_page.html", style="float:right;">{{session['username']}}</a>
+  {% else %}
+    <a href="/login.html", style="float:right;">Log In</a>
+  {% endif %}
+</div>
+
+<div class="block1">
+<h1>Hello {{session['username']}}!</h1>
+<br><br><br>
+{% if possible_courses %}
+<form action="/add_course.html" method="post">
+  {% for value in possible_courses %}
+  <label for {{value[1]}}>{{value[1]}}</label>
+  <input type="radio" id={{value[0]}} name=course_to_add value={{value[0]}}><br>
+  {% endfor %}
+  <br>
+  <input type="submit" id="sub" name="sub" value="Add Course?"><br><br>
+</form>
+{% else %}
+<form action="/course_search.html" method="post">
+  <label for="course_search">Search for course by name</label>
+  <input type="text" id="course_search" name="course_search" value="">
+  <input type="submit" id="sub" name="sub" value="Search"><br><br>
+</form>
+{% endif %}
+
+<br><br><br><br><br><br><br><br><br>
+<form action="/logout.html" method="post">
+  <input type="submit" id="logout" name="logout" value="Logout?"><br><br>
+</form>
+</div>
+
+</body>
+</html>
