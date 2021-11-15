@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Website</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/home.html">Home</a>
+  <a href="/comparison">Pokemon Comparison</a>
+  <a href="/teambuilder">Team Builder</a>
+  {% if session['username'] %}
+    <a href="/user_page.html", style="float:right;">{{session['username']}}</a>
+  {% else %}
+    <a href="/login.html", style="float:right;">Log In</a>
+  {% endif %}
+</div>
+
+<div class="block1">
+<h1>TeamBuilder</h1>
+
+<img height="240" src="https://stickershop.line-scdn.net/stickershop/v1/product/15492/LINEStorePC/main.png">
+
+</div>
+
+</body>
+</html>
