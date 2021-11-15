@@ -21,6 +21,11 @@ def search():
     global poke_names
     return render_template('textboxes.html')
 
+@app.route('/teambuilder')
+def team_builder():
+    #global poke_names
+    return render_template('teambuilder.html')
+
 @app.route('/comparison', methods=['POST'])
 def comparison():
     poke1 = str(request.form['text1']).lower()
