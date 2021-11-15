@@ -132,13 +132,13 @@ def read_users_csv():
     with open('database/users.csv', newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='|')
 
-def add_user(username, email, password, student_prof):
+def add_user(username, email, password):
     with open('database/users.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         reader = csv.reader(csvfile, delimiter=',', quotechar='|')
         #Read last row and determine user_id or assign random userID
         user_id = random.randint(1000000, 9999999)
-        writer.writerow([user_id, username, email, password, student_prof])
+        writer.writerow([user_id, username, email, password])
 
 def is_login_valid(username, password):
     with open('database/users.csv', newline='') as csvfile:
