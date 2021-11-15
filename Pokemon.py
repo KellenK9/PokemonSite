@@ -103,8 +103,7 @@ def register_new_user():
     username = request.form['username']
     email = request.form['email']
     password = request.form['password']
-    student_prof = request.form['student_prof']
-    add_user(username, email, password, student_prof) #hash password
+    add_user(username, email, password) #hash password
     return render_template("home.html")
 
 @app.route("/logout.html", methods=["post"])
