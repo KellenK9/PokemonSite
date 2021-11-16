@@ -107,3 +107,9 @@ h3{
 .container1{
   text-align: center;
 }
+
+.defensive-coverage-table { border-spacing: 0; border-collapse: collapse; }
+.defensive-coverage-table th { padding: .5em; }
+.defensive-coverage-table td { border: 1px solid; width: 2em; height: 2em; }
+.defensive-coverage-table .light { background: #eee; }
+.defensive-coverage-table .dark { background: #000; }
