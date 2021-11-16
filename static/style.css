@@ -111,6 +111,6 @@ h3{
 .defensive-coverage-table { border-spacing: 0; border-collapse: collapse; }
 .defensive-coverage-table th { padding: .5em; }
 .defensive-coverage-table td { border: 1px solid; width: 2em; height: 2em; }
-.defensive-coverage-table .light { background: #eee; }
-.defensive-coverage-table .dark { background: #000; }
+.defensive-coverage-table .light { background: #ffc9b8; }
+.defensive-coverage-table .dark { background: #ffb8c8; }
 .defensive-coverage-table .edge { background: #71bbde; }
