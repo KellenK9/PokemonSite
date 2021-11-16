@@ -113,3 +113,4 @@ h3{
 .defensive-coverage-table td { border: 1px solid; width: 2em; height: 2em; }
 .defensive-coverage-table .light { background: #eee; }
 .defensive-coverage-table .dark { background: #000; }
+.defensive-coverage-table .edge { background: #71bbde; }
