@@ -1,22 +1,6 @@
-<html>
-<head>
-    <title>PokéTools</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% extends "JinjaLayout.html" %}
+{% block content %}
 
-</head>
-
-<body>
-  <div class="navbar">
-    <a href="/home.html">Home</a>
-    <a href="/comparison">Pokemon Comparison</a>
-    <a href="/teambuilder">Team Builder</a>
-    {% if session['username'] %}
-      <a href="/user_page.html", style="float:right;">{{session['username']}}</a>
-    {% else %}
-      <a href="/login.html", style="float:right;">Log In</a>
-    {% endif %}
-  </div>
-  <div class = "block1">
   <div class= "container1">
     <h2>Enter the names of the 2 pokemon you want to compare</h2>
     <form action="/comparison", method="POST">
@@ -924,8 +908,6 @@
       </datalist>
       <input type="submit">
     </form>
-    <img height="240" src="https://stickershop.line-scdn.net/stickershop/v1/product/15492/LINEStorePC/main.png">
   </div>
-  </div>
-</body>
-</html>
+
+{% endblock %}
