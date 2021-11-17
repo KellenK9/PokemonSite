@@ -6,16 +6,8 @@
 </head>
 <body>
 
-<div class="navbar">
-  <a href="/home.html">Home</a>
-  <a href="/comparison">Pokemon Comparison</a>
-  <a href="/teambuilder">Team Builder</a>
-  {% if session['username'] %}
-    <a href="/user_page.html", style="float:right;">{{session['username']}}</a>
-  {% else %}
-    <a href="/login.html", style="float:right;">Log In</a>
-  {% endif %}
-</div>
+{% block navbar %}
+{% endblock %}
 
 <div class="block1">
 <h1>PokeTools</h1>
