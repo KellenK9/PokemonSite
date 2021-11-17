@@ -1,38 +1,5 @@
-<html>
-<head>
-    <title>PokéTools</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<style>
-@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
-
-h3{
-    font-family: 'RocknRoll One', sans-serif;
-    font-weight: normal;
-    color: #cf2213;
-    font-size: 1em;
-}
-
-</style>
-
-<script>
-</script>
-
-</head>
-<body>
-
-<div class="navbar">
-  <a href="/home.html">Home</a>
-  <a href="/comparison">Pokemon Comparison</a>
-  <a href="/teambuilder">Team Builder</a>
-  {% if session['username'] %}
-    <a href="/user_page.html", style="float:right;">{{session['username']}}</a>
-  {% else %}
-    <a href="/login.html", style="float:right;">Log In</a>
-  {% endif %}
-</div>
-
-<div class="block1">
-<h1>PokeTools</h1>
+{% extends "JinjaLayout.html" %}
+{% block content %}
 <h2>Login or Register</h2>
 <h3>{{error}}</h3>
 
@@ -48,8 +15,4 @@ h3{
 	<input type="submit" value="New User? Register here">
 </form>
 
-</div>
-
-</body>
-</html>
-
+{% endblock %}
