@@ -23,8 +23,11 @@ def search():
 
 @app.route('/teambuilder')
 def team_builder():
-    #global poke_names
     return render_template('teambuilder.html')
+
+@app.route('/typechart')
+def type_chart():
+    return render_template('typechart.html')
 
 @app.route('/comparison', methods=['POST'])
 def comparison():
