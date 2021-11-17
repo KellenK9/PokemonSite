@@ -116,4 +116,4 @@ h3{
 .defensive-coverage-table .edge { background: #AAB09F; }
 .defensive-coverage-table .effective { background: #19ad0e; text-align: center;}
 .defensive-coverage-table .lesseffective { background: #e00707; text-align: center;}
-.defensive-coverage-table .noneffective { background: #051126; color: #ffffff; text-align: center;}
+.defensive-coverage-table .noneffective { background: #051126; color: #ffffff; text-align: center; border-color: #000000;}
