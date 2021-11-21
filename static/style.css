@@ -35,6 +35,16 @@ h3{
     width: 100%
 }
 
+.navbarhead a {
+  float: center;
+  font-family: 'RocknRoll One', sans-serif;
+  font-weight: normal;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
 .navbar {
   overflow: hidden;
   background-color: #333;
