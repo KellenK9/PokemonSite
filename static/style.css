@@ -76,6 +76,7 @@ h3{
 }
 
 .pokemonpicker {
+    float: center;
     overflow: hidden;
     background-color: #123a7a;
     width: 90%;
