@@ -28,7 +28,7 @@ h3{
     font-size: 1em;
 }
 
-.navbarhead {
+navbarhead {
     overflow: hidden;
     background-color: #333;
     top: 0;
@@ -46,7 +46,7 @@ h3{
   text-decoration: none;
 }
 
-.navbar {
+navbar {
   overflow: hidden;
   background-color: #333;
   position: fixed;
