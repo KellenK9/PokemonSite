@@ -76,9 +76,10 @@ h3{
 }
 
 .pokemonpicker {
-    float: center;
+    border-radius: 25px;
+    border: 2px solid #123a7a;
     overflow: hidden;
-    background-color: #123a7a;
+    background-color: #ffffff;
     width: 90%;
     height: 120px;
 }
