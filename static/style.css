@@ -86,6 +86,11 @@ h3{
     padding: 10px;
 }
 
+.pokemonpicker img {
+    height: 20px;
+    width: 20px;
+}
+
 .block1 {
   margin-top: 50px;
 }
