@@ -28,6 +28,13 @@ h3{
     font-size: 1em;
 }
 
+.navbarhead {
+    overflow: hidden;
+    background-color: #333;
+    top: 0;
+    width: 100%
+}
+
 .navbar {
   overflow: hidden;
   background-color: #333;
