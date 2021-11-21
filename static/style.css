@@ -75,6 +75,13 @@ h3{
   color: black;
 }
 
+.pokemonpicker {
+    overflow: hidden;
+    background-color: #123a7a;
+    width: 90%;
+    height: 120px;
+}
+
 .block1 {
   margin-top: 50px;
 }
