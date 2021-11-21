@@ -52,9 +52,11 @@ h3{
 .navbar {
   overflow: hidden;
   background-color: #333;
-  position: fixed;
   top: 120px;
   width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .navbar a {
