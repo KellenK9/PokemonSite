@@ -37,9 +37,10 @@ h3{
 
 .navbarhead a {
   float: center;
-  font-family: 'RocknRoll One', sans-serif;
+  font-family: 'Modak', cursive;
   font-weight: normal;
-  color: #f2f2f2;
+  color: #c40404;
+  font-size: 5em;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
