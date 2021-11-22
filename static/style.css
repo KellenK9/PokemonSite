@@ -91,6 +91,10 @@ h3{
     width: 96px;
 }
 
+.pokemonpicker img:hover {
+    background-color: #97f3f7;
+}
+
 .block1 {
   margin-top: 50px;
 }
