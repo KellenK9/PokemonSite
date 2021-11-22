@@ -95,6 +95,17 @@ h3{
     background-color: #97f3f7;
 }
 
+.filter {
+    border-radius: 25px;
+    border: 2px solid #123a7a;
+    overflow: hidden;
+    background-color: #87c6c7;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
 .block1 {
   margin-top: 50px;
 }
