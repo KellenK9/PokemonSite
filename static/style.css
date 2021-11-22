@@ -105,6 +105,10 @@ h3{
     padding: 10px;
 }
 
+.filter p{
+    display:inline;
+}
+
 .block1 {
   margin-top: 50px;
 }
